@@ -10,7 +10,7 @@
 ## Phase 0 — Foundation ✅
 - ✅ Choose name & stack → **CipherDeck**, Swift/SwiftUI/SwiftPM, zero dependencies
 - ✅ CLAUDE.md (pillars: security, reliability) and STATE.md
-- ✅ Git repo, LICENSE (MIT), .gitignore (README → Phase 5)
+- ✅ Git repo, README, LICENSE (MIT), .gitignore
 - ✅ SwiftPM package: Core library, App, SelfTest executable
 
 ## Phase 1 — Core engine (CipherDeckCore) ✅
@@ -56,11 +56,13 @@
 - ⬜ Camera scan of a real Google Authenticator transfer QR
 - ⬜ Screen-region scan (grants Screen Recording permission on first use)
 
-## Phase 5 — Ship 🚧
-- ⬜ build_app.sh: release build, bundle, Hardened Runtime, ad-hoc signature
-- ⬜ make_dmg.sh → `dist/CipherDeck-<ver>.dmg`
-- ⬜ README: install (unsigned app), import-from-Google guide, security model
-- ⬜ Full self-test run + smoke launch
+## Phase 5 — Ship ✅
+- ✅ build_app.sh: release build, bundle, Hardened Runtime, ad-hoc signature
+- ✅ make_dmg.sh → `dist/CipherDeck-<ver>.dmg`
+- ✅ README: install (unsigned app), import-from-Google guide, security model
+- ✅ Full self-test run + smoke launch (613/613, demo launch + 7 screenshots, QR gen→Vision decode round-trip)
+- ✅ README screenshots (`docs/screenshots`), MIT license section
+- ✅ `dist/CipherDeck-1.0.0.dmg` (2.5 MB, arm64, ad-hoc signed, Hardened Runtime, hdiutil-verified)
 
 ## Backlog / ideas (post 1.0)
 - Import from Aegis / 2FAS / Raivo / andOTP exports
@@ -73,6 +75,7 @@
 ---
 
 ## Decisions log
+- **2026-09-22** — Commits use gitmoji and are pushed to github.com/Amirzvni/CipherDeck after each phase.
 - **2026-09-22** — Name *CipherDeck* (a netrunner's "cyberdeck" for your ciphers). Native
   Swift over Electron/Tauri: smallest attack surface, Keychain/Touch ID/Vision native, tiny
   binary, no JS supply chain.
